@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #0000004d;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-container a {
+    margin: 0 5rem;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: rgba(255, 193, 7, 1);
+}
+
+.navbar-container a:nth-child(2),
+.navbar-container a:nth-child(3) {
+    background-color: #0a58ca;
+}
+
+.navbar-container a:hover {
+    color: rgba(255, 193, 7, 0.8);
+}
