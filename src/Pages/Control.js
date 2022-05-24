@@ -18,6 +18,10 @@ const Control = () => {
     const [adjustTemp, setAdjustTemp] = useState(27);
 
     useEffect(() => {
+        socket.emit("sync", "sync");
+    }, []);
+
+    useEffect(() => {
         socket.on("data_dht", (data) => {
             let temperatureElement = document.getElementById("temperature");
             let humidityElement = document.getElementById("humidity");
@@ -39,10 +43,6 @@ const Control = () => {
             }
         });
     }, [socket]);
-
-    useEffect(() => {
-        socket.emit("sync", "sync");
-    }, []);
 
     useEffect(() => {
         let bodyElement = document.querySelector("body");
